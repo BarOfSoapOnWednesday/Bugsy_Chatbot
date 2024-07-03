@@ -12,15 +12,37 @@
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0;
+            font-family: sans-serif;
         }
         #chatbot-container {
             width: 100%;
             height: 100%;
+            position: relative;
+        }
+        #background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;https://github.com/BarOfSoapOnWednesday/Bugsy_Chatbot/blob/main/HeartBug.png
+            background: url('./HeartBug.png') no-repeat center center/cover;
+        }
+        #title {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 10vw; /* Large font size relative to viewport width */
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div id="chatbot-container">
+        <div id="background"></div>
+        <div id="title">HeartBug</div>
         <script
             type="module"
             src="https://agent.d-id.com/v1/index.js"
@@ -33,3 +55,4 @@
     </div>
 </body>
 </html>
+
