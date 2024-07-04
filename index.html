@@ -9,10 +9,24 @@
             height: 100%;
             margin: 0;
             display: flex;
+            flex-direction: column; /* Changed from row to column */
+            font-family: sans-serif;
+        }
+        .upper-panel {
+            width: 100%;
+            height: 50%;
+            background-color: #000000; /* Black background */
+            display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #8B0000; /* Dark red background */
-            font-family: sans-serif;
+        }
+        .lower-panel {
+            width: 100%;
+            height: 50%;
+            background-color: #FFFFFF; /* White background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             width: 100%;
@@ -53,16 +67,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="chat-prompt">Tap on Mike to chat</div>
-        <div class="header">
-            <div class="header-content">
-                <img src="https://github.com/BarOfSoapOnWednesday/Bugsy_Chatbot/blob/main/HeartBug.png?raw=true" alt="HeartBug Image">
-                <div class="header-text">
-                    <p>HeartBug</p>
+    <div class="upper-panel">
+        <div class="container">
+            <div class="chat-prompt">Tap on Mike to chat</div>
+            <div class="header">
+                <div class="header-content">
+                    <img src="https://github.com/BarOfSoapOnWednesday/Bugsy_Chatbot/blob/main/HeartBug.png?raw=true" alt="HeartBug Image">
+                    <div class="header-text">
+                        <p>HeartBug</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="lower-panel">
         <script
             type="module"
             src="https://agent.d-id.com/v1/index.js"
