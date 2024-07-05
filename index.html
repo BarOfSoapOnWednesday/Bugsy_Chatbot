@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engage with our interactive chatbot, HeartBug. Tap on the microphone to start chatting.">
+    <meta name="keywords" content="Chatbot, Interactive, HeartBug">
     <title>Fullpage Chatbot</title>
     <style>
         html, body {
@@ -71,6 +73,23 @@
             data-client-key="Z29vZ2xlLW9hdXRoMnwxMDE5MDYyNTU5OTYzODA1NDkyNzY6ZWYwNnk5SzA5bFBLT0dSVTFIb3k2"
             data-agent-id="agt_umm3nYYk"
             data-monitor="true">
+        </script>
+        <script>
+            function speak(text) {
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.volume = 1; // Max volume
+                    utterance.rate = 1; // Normal speaking rate
+                    utterance.pitch = 1; // Normal pitch
+                    window.speechSynthesis.speak(utterance);
+                } else {
+                    alert('Sorry, your browser does not support text to speech!');
+                }
+            }
+
+            document.querySelector('.chat-prompt').addEventListener('click', () => {
+                speak('Hello! Tap on Mike to chat.');
+            });
         </script>
     </div>
 </body>
